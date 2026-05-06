@@ -7,6 +7,22 @@ billing_address = '17 Park Drive, The Shire 2695'
 owner_name = 'Alex Ngyuen'
 account_balance = 129.95
 
+ccard = input("Enter your updated credit card information: ")
+print("Your credit card number is:", ccard)
+
+age = '4'
+billing_address = '17 Park Street'
+vaccinated = 'False'
+owner_name = 'Alex Jones'
+account_balance -= 25
+print(name, animal_category, age, vaccinated, ccard, billing_address, owner_name, account_balance)
+
+
+
+
+
+
+
 # ACTIVITIES:
 #Theere are many ways to complete these tasks. How will you do them?
 #1 Increase age by 1 year
