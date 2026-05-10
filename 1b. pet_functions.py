@@ -11,18 +11,48 @@ def help():
   print('Welcome to the Pet Data Management System')
   print("Every vet's best friend")
 
+def increase_age():
+  global age
+  age = age + 1
 
-
-#ACTIVITIES:
-#There are many ways to complete these. How will you go about the job?
-#1. Verify this number 1234 4334 1001 0000
+def verify_credit_card(card_num):
+  if len(card_num) == 19:
+    if len(card_num.split()) == 4:
+      return True
+  return False
+  
 
 num = '1234 4334 1001 0000'
 if verify_credit_card(num) == True:
   print('VALID')
 else:
   print('INVALID')
-  
+
+  help()
+
+#ACTIVITIES:
+#There are many ways to complete these. How will you go about the job?
+#1. Verify this number 1234 4334 1001 0000
+num = '1234 4334 1001 0000'
+if verify_credit_card(num) == True:
+  print('VALID')
+else:
+  print('INVALID')
+
 #2. Ask the user for a credit card number and let them know if it is valid
 #3. If the credit card is valid then reduce balance by $39
+num = input('Enter a credit card number:')
+if verify_credit_card(num) == True:
+  print('VALID')
+  account_balance -= 39
+else:
+  print('INVALID')
+
+print(account_balance)
 #4. Write and test a function to vaccinate Bonnie 
+print(vaccinated)
+def vaccinate():
+  global vaccinated
+  vaccinated = True
+vaccinate()
+print(vaccinated)
