@@ -11,25 +11,18 @@ def help():
   print('Welcome to the Pet Data Management System')
   print("Every vet's best friend")
 
-def increase_age():
-  global age
-  age = age + 1
-
-def verify_credit_card(card_num):
-  if len(card_num) == 19:
-    if len(card_num.split()) == 4:
-      return True
-  return False
-
-
-help()
-increase_age()
-print(age)
 
 
 #ACTIVITIES:
 #There are many ways to complete these. How will you go about the job?
 #1. Verify this number 1234 4334 1001 0000
+
+num = '1234 4334 1001 0000'
+if verify_credit_card(num) == True:
+  print('VALID')
+else:
+  print('INVALID')
+  
 #2. Ask the user for a credit card number and let them know if it is valid
 #3. If the credit card is valid then reduce balance by $39
 #4. Write and test a function to vaccinate Bonnie 
