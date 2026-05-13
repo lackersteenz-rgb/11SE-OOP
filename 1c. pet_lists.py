@@ -9,7 +9,18 @@ Vaccination Status: False
 '''
 #3. Demonstrate what happens when an item is deleted
 
+names = ['Foxy', 'Bella', 'Hootie']
+animal_categories = ['Dog', 'Rabbit', 'Blowfish']
+ages = [8,3,34]
+vaccinated = [False, False, True]
 
+for i in range(len(names)):
+    print('Pet name:', names[i])
+    print('Category:', animal_categories[i])
+    print('Age:', ages[i])
+    print('Vaccinated',vaccinated[i])
+    print('')
+    
 
 
   #ACTIVITIES:
