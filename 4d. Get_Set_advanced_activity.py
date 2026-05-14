@@ -46,9 +46,15 @@ class Pet:
 p1 = Pet(name='Bonnie', category='Dog')
 p2 = Pet('Clyde','Cat','Persian',12)
 p3 = Pet('Cindy', 'Dog',age = 3)
+p4 = Pet('Hooty', 'Blowfish', age = 35)
+p5 = Pet('Rex', 'Dog', breed = 'German Sheperd')
 
+pets = [p1,p2,p3,p4,p5]
 
-pets = [p1,p2,p3]
+for pet in pets:
+    pet.have_birthday()
+    print(pet)
+    print('')
 
 
 #ACTIVITIES:
