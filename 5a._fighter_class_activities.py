@@ -8,7 +8,7 @@ import random, time
 class Fighter:
     def __init__(self,name, starting_health, weapon, shield):
         self.name = name
-        self.health = starting_health
+        self.__health = starting_health
         self.weapon = weapon
         self.shield = shield
 
@@ -22,7 +22,7 @@ class Fighter:
             return False
 
     def random_attack(self):
-        attack_power = random.randint(self.weapon/2,self.weapon*2)
+        attack_power = random.randint(self.weapon//2,self.weapon*2)
         print('Attack power:', attack_power)
         return attack_power
     
@@ -49,7 +49,7 @@ while True:
         print('You win')
         break
     print('The troll attacks you . . .')
-    you.defent(troll.random_attack())
+    you.defend(troll.random_attack())
     you.report()
     time.sleep(2)
     if you.is_dead():
