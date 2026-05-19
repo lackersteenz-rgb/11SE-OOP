@@ -28,7 +28,7 @@ class Fighter:
         return attack_power
 
     def skill_attack(self):
-        attack_power = random.randint(self.weapon/2, self.weapon*2)
+        attack_power = random.randint(self.weapon//2, self.weapon*2)
         target = random.randint(2,6)
         print('Hit enter in exactly',target,'seconds')
         tic = time.time()
@@ -50,3 +50,37 @@ class Fighter:
             print('Damage:', damage)
         else:
             print('No damage')
+
+class Wizard(Fighter):
+    def __init__(self,name, starting_health, weapon, shield,magic):
+        super().__init__(name, starting_health, weapon, shield)
+        self.magic = magic
+
+    def random_attack(self):
+        attack_power = random.randint(self.weapon//2, self.weapon*2)
+        print('Attack power:', attack_power)
+        return attack_power + self.magic
+
+you = Fighter('You',100,60,20)
+wiz = Wizard('The Grey Wizard',100,30,10,50)
+
+you.report()
+wiz.report()
+
+while True:
+    print('You attack the' ,wiz.name)
+    wiz.defend(you.skill_attack())
+    wiz.report()
+    time.sleep(2)
+    print('')
+    if wiz.is_dead():
+        print('You win')
+        break
+    print(wiz.name,' attacks you . . .')
+    you.defend(wiz.random_attack())
+    you.report()
+    time.sleep(2)
+    if you.is_dead():
+        print(wiz.name,'wins')
+        break
+
